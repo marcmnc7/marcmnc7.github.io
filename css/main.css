@@ -206,7 +206,7 @@ blockquote p cite  {
     }
 
 .datos{
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -221,7 +221,6 @@ blockquote p cite  {
     color: black;
     font-weight: bold;
 }
-
 
 .photo-jobs{
     position: absolute;
@@ -314,3 +313,20 @@ blockquote p cite  {
 .warning p{
     vertical-align: center;
 }
+
+.job-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img-line{
+    width: 25%;
+    margin-right: 20px;
+}
+
+.main-section .stack{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Full Stack | Marc Serra</title>
+</head>
+<body>
+    <div class="content">
+        <nav class="navigation-menu">
+            <a href="/index.html"><h1 id="name" class="main-title">Marc Serra Hidalgo</h1></a>
+            <ul id="myLinks">
+                <li><a href="/experiencia.html">Experiencia</a></li><p class="separator">|</p class="separator">
+                <li><a href="/educacion.html">Educación</a></li><p class="separator">|</p>
+                <li><a href="/proyectos.html">Proyectos</a></li><p class="separator">|</p class="separator">
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+            <div onclick="showNav()" id="burguer" class="burguer">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="slide less">
+                <h2 class="job-title">Mis proyectos</h2>
+                <p class="hello-world">assert(time && hobbie == project)</p>
+            </div>
+        </header>
+        <main class="main-section">
+            <article class="job-row">
+                <img class="img-line" src="/src/face-img.jpeg" alt="">
+                <div class="job-info">
+                    <div class="job-details">
+                        <h3 class="subjob-title">
+                            Mi página web
+                        </h3>
+                        <p class="business-name">
+                            Working on
+                        </p>
+                        <time class="time-in-business">
+                            2020
+                        </time>
+                    </div>
+                    <p class="job-description">
+                        Proyecto de desarrollo de mi pagina web personal. Diseñado en HTML CSS y Javascrip.
+                    </p>
+                </div>
+            </article>
+            <hr>
+            <article class="job-row">
+                <img class="img-line" src="/src/menorca.jpg" alt="">
+                <div class="job-info">
+                    <div class="job-details">
+                        <h3 class="subjob-title">
+                            Platges de Menorca
+                        </h3>
+                        <p class="business-name">
+                            Working on
+                        </p>
+                        <time class="time-in-business">
+                            2020
+                        </time>
+                    </div>
+                    <p class="job-description">
+                        Aplicación móvil que da un parte (bandera, medusas y parking) actualizado sobre el estado de las principales playas menorquinas basandose en los datos recibidos de los socorristas y también de los usuarios.
+                    </p>
+                </div>
+            </article>
+            <hr>
+            <article class="job-row">
+                <img class="img-line" src="/src/qpc.webp" alt="">
+                <div class="job-info">
+                    <div class="job-details">
+                        <h3 class="subjob-title">
+                            ¿Que puedo cocinar?
+                        </h3>
+                        <p class="business-name">
+                            Stil live here: <a href="#">play store link</a>
+                        </p>
+                        <time class="time-in-business">
+                            2018
+                        </time>
+                    </div>
+                    <p class="job-description">
+                        App movil que recomienda recetas concretas que el usuario puede cocinar basandose en los ingredientes que este dispone en su despensa.
+                    </p>
+                </div>
+            </article>
+            <hr>
+            <article class="job-row">
+                <img class="img-line" src="/src/meconoces.webp" alt="">
+                <div class="job-info">
+                    <div class="job-details">
+                        <h3 class="subjob-title">
+                            ¿Me conoces?
+                        </h3>
+                        <p class="business-name">
+                            Not live - Reached +30k downloads
+                        </p>
+                        <time class="time-in-business">
+                            2017
+                        </time>
+                    </div>
+                    <p class="job-description">
+                        Juego movil que, mediante la respuesta de preguntas por turnos, concluía la afinidad entre los dos jugadores.    
+                    </p>
+                </div>
+            </article>
+        </main>
+    </div>
+    <footer class="footer">
+        <i class="fas fa-code"></i>&nbsp;&nbsp;<p>Made with love in Barcelona by a menorquín</p>&nbsp;&nbsp;<i class="fas fa-code"></i>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
