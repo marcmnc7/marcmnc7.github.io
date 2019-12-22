@@ -40,8 +40,11 @@ body {
     box-sizing: border-box;
 }
 
+div .less{
+    height: 130px;
+}
 
-.main-section > section{
+.main-section > section,article{
     font-size: 1rem;
     padding: 1.5rem;
 }
@@ -84,7 +87,6 @@ body {
     height: 250px;
     background-image: url("../src/serverMoreBlurred.jpg");
     position: relative;
-    margin-bottom: 30px;
 }
 .rounded{
     border-radius: 50%;
@@ -97,6 +99,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.contact-face img{
+    width: 80px;
+    height: 80px;
 }
 
 .face-img img{
@@ -137,6 +143,11 @@ body {
     color: inherit;
 }
 
+
+.job{
+    display: flex;
+    flex-direction: column;
+}
 
 .job-title{
     font-size: 25px;
@@ -195,6 +206,7 @@ blockquote p cite  {
     }
 
 .datos{
+    margin-top: 30px;
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -208,4 +220,97 @@ blockquote p cite  {
 .datos-div :first-child{
     color: black;
     font-weight: bold;
+}
+
+
+.photo-jobs{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.photo-jobs img{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.subjob-title{
+    font-size: 1.5rem;
+}
+
+.job-description{
+    margin-top: 10px;
+}
+
+.time-in-business{
+    margin-top: 10px;
+}
+
+.business-name{
+    font-weight: bold;
+}
+
+.business-name,.time-in-business{
+    color:#666;
+}
+
+.job-description{
+    text-align: justify;
+}
+.job-tasks{
+    margin-top: 8px;
+}
+
+.job-tasks li{
+    list-style-type: square;
+    margin-left: 30px;
+}
+
+.contact{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact label{
+    margin-top: 20px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 154px;
+}
+
+.contact input,textarea{
+    width: 150px;
+    border: 4px rgba(133, 30, 62, 0.1) solid;
+    background-color: rgba(93, 22, 44, 0.5);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.btn-send{
+    margin-top: 20px;
+    width: 160px;
+    height: 30px;
+    background-color: rgb(93, 22, 44);
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+.warning{
+    background-color: rgba(242, 255, 51, 0.5);
+    height: fit-content;
+    line-height: 10px;
+    text-align: center;
+    padding: 5px;
+}
+.warning p{
+    vertical-align: center;
 }

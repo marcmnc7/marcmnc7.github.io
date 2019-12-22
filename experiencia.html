@@ -18,10 +18,10 @@
         <nav class="navigation-menu">
             <a href="/index.html"><h1 id="name" class="main-title">Marc Serra Hidalgo</h1></a>
             <ul id="myLinks">
-                <li><a href="#">Experiencia</a></li><p class="separator">|</p class="separator">
-                <li><a href="#">Educación</a></li><p class="separator">|</p>
-                <li><a href="#">Proyectos</a></li><p class="separator">|</p class="separator">
-                <li><a href="#">Contacto</a></li>
+                <li><a href="/experiencia.html">Experiencia</a></li><p class="separator">|</p class="separator">
+                <li><a href="/educacion.html">Educación</a></li><p class="separator">|</p>
+                <li><a href="/proyectos.html">Proyectos</a></li><p class="separator">|</p class="separator">
+                <li><a href="/contacto.html">Contacto</a></li>
             </ul>
             <div onclick="showNav()" id="burguer" class="burguer">
                 <div></div>
@@ -30,9 +30,103 @@
             </div>
         </nav>
         <header class="header">
-            <p>Mi experiencia es la siguiente:</p>
+            <div class="slide">
+                <h2 class="job-title">Mi experiencia laboral</h2>
+                <p class="hello-world">myJobs.push(newJob)</p>
+                <div class="photo-jobs">
+                    <a href="#anchor-Airning"><img src="/src/airning.jpg" alt=""></a>
+                    <a href="#anchor-21Buttons"><img src="/src/21Buttons.png" alt=""></a>
+                    <a href="#anchor-binary"><img src="/src/binary.jpeg" alt=""></a>
+                </div>
+            </div>
         </header>
         <main class="main-section">
+            <article id="anchor-airning" class="job">
+                <div class="job-details">
+                    <h3 class="subjob-title">
+                        Backend Developer
+                    </h3>
+                    <p class="business-name">
+                        Airning Claims
+                    </p>
+                    <time class="time-in-business">
+                        Octubre 2019 -  actualidad
+                    </time>
+                </div>
+                <p class="job-description">
+                    Blabla
+                    <ul class="job-tasks">
+                        <li>
+                            Blabla.                            
+                        </li>
+                        <li>
+                            Blabla.
+                        </li>
+                        <li>
+                            Blabla.
+                        </li>
+                    </ul>
+                </p>
+            </article>
+            <hr>
+            <article id="anchor-21Buttons" class="job">
+                <div class="job-details">
+                    <h3 class="subjob-title">
+                            Software Engineer | Crawling
+                    </h3>
+                    <p class="business-name">
+                        21 Buttons
+                    </p>
+                    <time class="time-in-business">
+                        Noviembre 2017 -  Octubre 2019
+                    </time>
+                </div>
+                <p class="job-description">
+                    Posición de software developer en una start-up dónde descubrí y profundicé en el conocimiento de muchas tecnologías. Formé parte de un equipo backend que se encargaba del catálogo de productos. Perfeccioné mi nivel de Python, Crawling, infraestructura (AWS, DigitalOcean) y varias herramientas (p.ej Git). Además de dar un gran salto profesional y personal, también aprendí sobre las metodologías y necesidades de una empresa con un producto tan especial y actual como es una aplicación móvil y red social.
+                    <ul class="job-tasks">
+                        <li>
+                            Crawling web.                            
+                        </li>
+                        <li>
+                            Proyectos de automatización web y scripts varios.
+                        </li>
+                        <li>
+                            Creación, limpieza y optimización de código.
+                        </li>
+                    </ul>
+                </p>
+            </article>
+            <hr>
+            <article id="anchor-binary" class="job">
+                <div class="job-details">
+                    <h3 class="subjob-title">
+                        Analista ERP
+                    </h3>
+                    <p class="business-name">
+                        Binary
+                    </p>
+                    <time class="time-in-business">
+                        Enero 2016 -  mayo 2016
+                    </time>
+                </div>
+                <p class="job-description">
+                    Prácticas en empresa realizadas durante el último curso académico de la universidad. En ellas, obtuve pleno conocimiento del mercado de los ERP’s en la isla de Menorca y Mallorca y conocimientos específicos sobre el desarrollo de un software de este tipo, así como de su implementación en las empresas cliente. La nota final de las prácticas fue de excelente (9’7).
+                    <ul class="job-tasks">
+                        <li>
+                            Soporte en la implementación de software a empresas.
+                        </li>
+                        <li>
+                            Redacción de informes de mercado y de anàlisis de competencia.
+                        </li>
+                        <li>
+                            Diseño y documentación de interfaces de software y BBDD.
+                        </li>
+                        <li>
+                            Realización de video-tutoriales de formación para clientes.
+                        </li>
+                    </ul>
+                </p>
+            </article>
         </main>
     </div>
     <footer class="footer">
