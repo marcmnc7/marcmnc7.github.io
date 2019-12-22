@@ -1,54 +1,211 @@
-* {
+html, body {
+    height: 100%;
+}
+body {
     font-size: 10px;
-    font-family: 'Roboto';
-    padding: 0px;
-    margin: 0px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 0 auto;
+    background-color: #FFF4F4;
+}
+.footer{
+    background-color: #BFA5A5;
+    flex-shrink: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(93, 22, 44);
+    font-size: 0.8rem;
 }
 
 .header{
     width: 100%;
 }
+
 .navigation-menu{
     position: fixed;
     z-index: 1;
     width: 100%;
     height: 50px;
-    background-color: rgba(193, 66, 66, 0.2);
+    background-color: rgba(133, 30, 62, 0.1);
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
 }
+
+
+.main-section > section{
+    font-size: 1rem;
+    padding: 1.5rem;
+}
+
 .main-title{
     color: white;
+    font-weight: bold;
     margin: 0px;
     padding: 0px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+/* .navigation-menu > *{
     align-self: center;
+    display: inline;
+} */
+
+.navigation-menu ul{
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-right: 30px;
 }
 .navigation-menu li{
-    display: none;
+    display: inline;
 }
-.navigation-menu a{
+
+.navigation-menu a,.separator{
+    font-size: 1rem;
     color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+
 .slide{
     width: 100%;
-    height: 500px;
-    background-image: url("../src/server.jpeg");
+    height: 250px;
+    background-image: url("../src/serverMoreBlurred.jpg");
     position: relative;
+    margin-bottom: 30px;
 }
 .rounded{
     border-radius: 50%;
 }
 .face-img{
     position: absolute;
-    top: 100%;
+    top: 90%;
     right: 50%;
-    width: 300px;
+    transform: translate(50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.face-img img{
+    border: 7px solid rgba(244, 244, 244, 1);
+    width: 160px;
+    height: 160px;
+}
+
+.parent-statics{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+.statics{
+    color: white;
+    font-size: 0.8rem;
+    padding: 15px;
+}
+
+.statics > div{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.statics > div > p:first-child{
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.statics > div > a{
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.job-title{
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    width: fit-content;
+    transform: translate(50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.hello-world{
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: -2px;
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    top: 105px;
+    right: 50%;
+    width: 100%;
     transform: translate(50%, -50%);
     text-align: center;
 }
-.click-me{
-    font-size: 25px;
-    box-sizing: border-box;
-    color: white
+
+.presentation{
+    text-align: justify;
+    line-height: 1.3rem;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.burguer div{
+    width: 35px;
+    height: 5px;
+    background-color: rgb(93, 22, 44);
+    margin: 6px 0;
+}
+
+blockquote  img  {
+    width: 30px;
+}
+blockquote  p  {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+blockquote p cite  {
+    color:#666;
+    font-size: 20px;
+    display:block;
+    text-align:right;
+    }
+
+.datos{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.datos-div{
+    width: 50%;
+    margin-top: 20px;
+    text-align: center;
+}
+.datos-div :first-child{
+    color: black;
+    font-weight: bold;
 }
