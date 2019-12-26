@@ -5,7 +5,10 @@ function changeFace() {
         nav.src = `${fileRoute}/src/face-img2.jpeg`;
     } else if (nav.src == `${fileRoute}/src/face-img2.jpeg`){
         nav.src = `${fileRoute}/src/face-img3.jpeg`;
-    } else{
+    } else if (nav.src == `${fileRoute}/src/face-img3.jpeg`){
+        nav.src = `${fileRoute}/src/face-img4.jpeg`;
+    }
+     else{
         nav.src = `${fileRoute}/src/face-img.jpeg`;
     }
 }

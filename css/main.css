@@ -35,8 +35,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
 }
 
@@ -183,6 +183,10 @@ div .less{
     justify-content: space-evenly;
 }
 
+.social-icons a{
+    color: inherit;
+}
+
 .burguer div{
     width: 35px;
     height: 5px;
@@ -269,12 +273,15 @@ blockquote p cite  {
 }
 
 .contact{
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.gif{
+    width: 100%;
 }
 
 .contact label{
@@ -326,7 +333,64 @@ blockquote p cite  {
 }
 
 .main-section .stack{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    height: 30px;
+    padding: 0px;
 }
 
+.bigemphasis{
+    font-size: 2rem;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.centered{
+    text-align: center;
+}
+
+
+/* FOR TEXT SCROLLING */
+.stack {
+    overflow: hidden;
+    position: relative;
+    background-color: #8080803d;
+    background-color: black;
+    color: chartreuse;
+}
+.stack p {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    line-height: 25px;
+    margin: 0;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(150%);
+    -webkit-transform:translateX(150%);	
+    transform:translateX(150%);
+    /* Apply animation to this element */	
+    -moz-animation: stack 15s linear infinite;
+    -webkit-animation: stack 15s linear infinite;
+    animation: stack 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes stack {
+    0%   { -moz-transform: translateX(150%); }
+    100% { -moz-transform: translateX(-150%); }
+}
+@-webkit-keyframes stack {
+    0%   { -webkit-transform: translateX(150%); }
+    100% { -webkit-transform: translateX(-150%); }
+}
+@keyframes stack {
+    0%   { 
+    -moz-transform: translateX(150%); /* Firefox bug fix */
+    -webkit-transform: translateX(150%); /* Firefox bug fix */
+    transform: translateX(150%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-150%); /* Firefox bug fix */
+    -webkit-transform: translateX(-150%); /* Firefox bug fix */
+    transform: translateX(-150%); 
+    }
+}
+/*-----------------------------------*/
