@@ -3,6 +3,7 @@ html, body {
 }
 body {
     font-size: 10px;
+    line-height: 25px;
     font-family: 'PT Sans Narrow', sans-serif;
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@ body {
     flex: 1 0 auto;
     background-color: #FFF4F4;
 }
+
 .footer{
     background-color: #BFA5A5;
     flex-shrink: 0;
@@ -21,7 +23,6 @@ body {
     color: rgb(93, 22, 44);
     font-size: 0.8rem;
 }
-
 .header{
     width: 100%;
 }
@@ -57,11 +58,6 @@ div .less{
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 }
-
-/* .navigation-menu > *{
-    align-self: center;
-    display: inline;
-} */
 
 .navigation-menu ul{
     display: none;
@@ -178,6 +174,11 @@ div .less{
     line-height: 1.3rem;
 }
 
+.citas-personales{
+    display: flex;
+    flex-direction: column;
+}
+
 .social-icons{
     display: flex;
     justify-content: space-evenly;
@@ -283,17 +284,21 @@ blockquote p cite  {
 .gif{
     width: 100%;
 }
+.gif2{
+    display: none;
+}
 
 .contact label{
     margin-top: 20px;
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    width: 154px;
+    width: 60%;
+    font-size: 0.8rem;
 }
 
 .contact input,textarea{
-    width: 150px;
+    width: 60%;
     border: 4px rgba(133, 30, 62, 0.1) solid;
     background-color: rgba(93, 22, 44, 0.5);
     color: white;
@@ -303,7 +308,7 @@ blockquote p cite  {
 
 .btn-send{
     margin-top: 20px;
-    width: 160px;
+    width: 20%;
     height: 30px;
     background-color: rgb(93, 22, 44);
     color: white;
@@ -316,10 +321,9 @@ blockquote p cite  {
     line-height: 10px;
     text-align: center;
     padding: 5px;
+    font-size: 0.9rem;
 }
-.warning p{
-    vertical-align: center;
-}
+
 
 .job-row{
     display: flex;
@@ -328,8 +332,9 @@ blockquote p cite  {
 }
 
 .img-line{
-    width: 25%;
-    margin-right: 20px;
+    width: 10%;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .main-section .stack{
@@ -346,7 +351,9 @@ blockquote p cite  {
 .centered{
     text-align: center;
 }
-
+.separator{
+    display: inline;
+}
 
 /* FOR TEXT SCROLLING */
 .stack {
@@ -358,39 +365,146 @@ blockquote p cite  {
 }
 .stack p {
     position: absolute;
-    width: 150%;
+    width: 200%;
     height: 100%;
     line-height: 25px;
     margin: 0;
     text-align: center;
     /* Starting position */
-    -moz-transform:translateX(150%);
-    -webkit-transform:translateX(150%);	
-    transform:translateX(150%);
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
     /* Apply animation to this element */	
-    -moz-animation: stack 15s linear infinite;
-    -webkit-animation: stack 15s linear infinite;
-    animation: stack 15s linear infinite;
+    -moz-animation: stack 20s linear infinite;
+    -webkit-animation: stack 20s linear infinite;
+    animation: stack 20s linear infinite;
 }
 /* Move it (define the animation) */
 @-moz-keyframes stack {
-    0%   { -moz-transform: translateX(150%); }
-    100% { -moz-transform: translateX(-150%); }
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
 }
 @-webkit-keyframes stack {
-    0%   { -webkit-transform: translateX(150%); }
-    100% { -webkit-transform: translateX(-150%); }
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
 }
 @keyframes stack {
     0%   { 
-    -moz-transform: translateX(150%); /* Firefox bug fix */
-    -webkit-transform: translateX(150%); /* Firefox bug fix */
-    transform: translateX(150%); 		
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
     }
     100% { 
-    -moz-transform: translateX(-150%); /* Firefox bug fix */
-    -webkit-transform: translateX(-150%); /* Firefox bug fix */
-    transform: translateX(-150%); 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
     }
 }
 /*-----------------------------------*/
+
+
+
+/* START RESPONSIVE */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .statics > div{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .gif{
+        max-height: 300px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .statics > div{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .datos{
+        justify-content: space-evenly;
+    }
+    .datos-div{
+        width: 20%;
+    }  
+    .burguer{
+        display: none;
+    }
+    #myLinks{
+        /* This is because showNav() function
+        creates an inline style rule and this
+        takes precedence over css. Its for fix
+        when navigation is showed in small sizes
+        and user increase screen size bigger than
+        768 */
+        display: flex !important;
+    }
+    .navigation-menu ul{
+        display: block;
+        width: fit-content;
+    }
+    .navigation-menu li{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .stack p {
+        -moz-animation: stack 20s linear infinite;
+        -webkit-animation: stack 20s linear infinite;
+        animation: stack 20s linear infinite;
+    }
+    .main-title{
+        /* This is because showNav() function
+        creates an inline style rule and this
+        takes precedence over css. Its for fix
+        when navigation is showed in small sizes
+        and user increase screen size bigger than
+        768 */
+        display: block !important;
+        margin-left: 50px;
+    }
+
+    #education .job{
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+    }
+    #education .job-details{
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+    #education .job-description{
+        flex-shrink: 1;
+        margin-top: 0px;
+    }
+    .gif2{
+        display: inline-block;
+        width: 33%;
+    }
+    .gif{
+        width: 33%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .statics > div{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    .gif{
+        max-height: 400px;
+    }
+    .citas-personales{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .citas-personales blockquote{
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+}

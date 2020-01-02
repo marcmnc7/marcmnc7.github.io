@@ -25,30 +25,6 @@ function showNav() {
     }
   }
 
-/*
-function move() {
-    var burger = document.getElementById("burguer");
-    var name = document.getElementById("name");
-    if (burger.className.includes("disappear")) {
-        burger.classList.add("appear")
-        burger.classList.remove("disappear")
-    } else{
-        burger.classList.add("disappear")
-        burger.classList.remove("appear")
-    }
-}
-*/
-/*
-function incrementEffect(){
-    var num = document.getElementById("face");
-    var target = dp
-    var interval = setInterval(function() {
-        num.text(number);
-        if (number >= target) clearInterval(interval);
-        number++;
-    }, 30);
-}*/
-
 function navToggle(x) {
     x.classList.toggle("change");
-  }
+}
