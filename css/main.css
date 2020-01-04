@@ -7,25 +7,52 @@ body {
     font-family: 'PT Sans Narrow', sans-serif;
     display: flex;
     flex-direction: column;
+    background-color: #fff4f4;
 }
 .content {
     flex: 1 0 auto;
-    background-color: #FFF4F4;
 }
 
-.footer{
-    background-color: #BFA5A5;
-    flex-shrink: 0;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(93, 22, 44);
-    font-size: 0.8rem;
-}
 .header{
     width: 100%;
 }
+
+hr {
+	height: 10px;
+    border: 0;
+    margin-top: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+/* FOOTER STUFF */
+.footer{
+    background-color: rgba(68, 48, 54, 0.978);;
+    color: white;
+    margin-top: 15px;
+}
+.madeby p{
+    display: inline;
+    font-size: 0.8rem;
+}
+.madeby{
+    text-align: center;
+    margin-bottom: 8px;
+}
+.social-icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    height: 100px;
+    font-size: 1rem;
+}
+.social-icons a{
+    color: inherit;
+}
+
+
+
+
 
 .navigation-menu{
     position: fixed;
@@ -47,7 +74,7 @@ div .less{
 
 .main-section > section,article{
     font-size: 1rem;
-    padding: 1.5rem;
+    padding: 1.9rem;
 }
 
 .main-title{
@@ -102,7 +129,7 @@ div .less{
 }
 
 .face-img img{
-    border: 7px solid rgba(244, 244, 244, 1);
+    border: 7px solid white;
     width: 160px;
     height: 160px;
 }
@@ -171,21 +198,14 @@ div .less{
 
 .presentation{
     text-align: justify;
-    line-height: 1.3rem;
+}
+.presentation *{
+    display: inline;
 }
 
 .citas-personales{
     display: flex;
     flex-direction: column;
-}
-
-.social-icons{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.social-icons a{
-    color: inherit;
 }
 
 .burguer div{
@@ -211,11 +231,12 @@ blockquote p cite  {
     }
 
 .datos{
-    margin-top: 20px;
     display: flex;
     align-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 0px;
+    background-color: white;
 }
 .datos-div{
     width: 50%;
@@ -327,14 +348,13 @@ blockquote p cite  {
 
 .job-row{
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
 }
 
 .img-line{
-    width: 10%;
-    margin-right: 40px;
-    margin-left: 40px;
+    width: 150px;
+    margin-top: 20px;
 }
 
 .main-section .stack{
@@ -343,8 +363,7 @@ blockquote p cite  {
 }
 
 .bigemphasis{
-    font-size: 2rem;
-    padding-bottom: 15px;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
@@ -355,53 +374,15 @@ blockquote p cite  {
     display: inline;
 }
 
-/* FOR TEXT SCROLLING */
 .stack {
-    overflow: hidden;
-    position: relative;
-    background-color: #8080803d;
-    background-color: black;
-    color: chartreuse;
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
-.stack p {
-    position: absolute;
-    width: 200%;
-    height: 100%;
-    line-height: 25px;
-    margin: 0;
-    text-align: center;
-    /* Starting position */
-    -moz-transform:translateX(100%);
-    -webkit-transform:translateX(100%);	
-    transform:translateX(100%);
-    /* Apply animation to this element */	
-    -moz-animation: stack 20s linear infinite;
-    -webkit-animation: stack 20s linear infinite;
-    animation: stack 20s linear infinite;
+.edu-number{
+    display: none;
 }
-/* Move it (define the animation) */
-@-moz-keyframes stack {
-    0%   { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes stack {
-    0%   { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(-100%); }
-}
-@keyframes stack {
-    0%   { 
-    -moz-transform: translateX(100%); /* Firefox bug fix */
-    -webkit-transform: translateX(100%); /* Firefox bug fix */
-    transform: translateX(100%); 		
-    }
-    100% { 
-    -moz-transform: translateX(-100%); /* Firefox bug fix */
-    -webkit-transform: translateX(-100%); /* Firefox bug fix */
-    transform: translateX(-100%); 
-    }
-}
-/*-----------------------------------*/
-
 
 
 /* START RESPONSIVE */
@@ -413,6 +394,13 @@ blockquote p cite  {
     }
     .gif{
         max-height: 300px;
+    }
+    .job-row {
+        flex-direction: row;
+        margin-left: 20px;
+    }
+    .img-line{
+        margin-right: 20px;
     }
 }
 
@@ -449,11 +437,6 @@ blockquote p cite  {
         margin-left: 20px;
         margin-right: 20px;
     }
-    .stack p {
-        -moz-animation: stack 20s linear infinite;
-        -webkit-animation: stack 20s linear infinite;
-        animation: stack 20s linear infinite;
-    }
     .main-title{
         /* This is because showNav() function
         creates an inline style rule and this
@@ -484,15 +467,17 @@ blockquote p cite  {
     .gif{
         width: 33%;
     }
-
+    .edu-number{
+        font-size: 90px;
+        color: lightgray;
+        padding: 10px;
+        display: block;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .statics > div{
-        margin-left: 250px;
-        margin-right: 250px;
-    }
+
     .gif{
         max-height: 400px;
     }
