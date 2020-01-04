@@ -105,7 +105,7 @@ div .less{
 }
 
 
-.slide{
+.slide,.slide-index{
     width: 100%;
     height: 250px;
     background-image: url("../src/serverMoreBlurred.jpg");
@@ -172,7 +172,7 @@ div .less{
     flex-direction: column;
 }
 
-.job-title{
+.job-title,.job-title-index{
     font-size: 25px;
     color: white;
     position: absolute;
@@ -183,7 +183,7 @@ div .less{
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.hello-world{
+.hello-world,.hello-world-index{
     font-family: 'Source Code Pro', monospace;
     letter-spacing: -2px;
     font-size: 13px;
@@ -260,6 +260,21 @@ blockquote p cite  {
     width: 100px;
     height: 100px;
     background-color: white;
+}
+.photo-jobs a{
+    cursor: default;
+}
+
+
+
+
+.zoom{
+    transition: transform .2s;
+}
+.zoom:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
 }
 
 .subjob-title{
@@ -402,6 +417,16 @@ blockquote p cite  {
     .img-line{
         margin-right: 20px;
     }
+    .slide-index{
+        height: 300px;
+    }
+    .face-img{
+        top: 83%;
+    }
+    .face-img img{
+        width: 190px;
+        height: 190px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -473,6 +498,20 @@ blockquote p cite  {
         padding: 10px;
         display: block;
     }
+    .slide-index{
+        height: 350px;
+    }
+
+    .job-title-index{
+        top: 110px;
+    }
+    .hello-world-index{
+        top: 135px;
+    }
+    .face-img{
+        top: 86%;
+    }
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -492,4 +531,5 @@ blockquote p cite  {
         padding-right: 10px;
         box-sizing: border-box;
     }
+
 }
