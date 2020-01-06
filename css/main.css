@@ -1,6 +1,8 @@
+/* ------- General stuff ------- */
 html, body {
     height: 100%;
 }
+
 body {
     font-size: 10px;
     line-height: 25px;
@@ -9,35 +11,32 @@ body {
     flex-direction: column;
     background-color: #fff4f4;
 }
-.content {
-    flex: 1 0 auto;
-}
-
-.header{
-    width: 100%;
-}
 
 hr {
-	height: 10px;
+    height: 10px;
     border: 0;
     margin-top: 0;
-	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
+/* ---------------------- */
 
-/* FOOTER STUFF */
+/* ----------- Footer ----------- */
 .footer{
     background-color: rgba(68, 48, 54, 0.978);;
     color: white;
     margin-top: 15px;
 }
+
 .madeby p{
     display: inline;
     font-size: 0.8rem;
 }
+
 .madeby{
     text-align: center;
     margin-bottom: 8px;
 }
+
 .social-icons{
     display: flex;
     justify-content: space-evenly;
@@ -46,14 +45,13 @@ hr {
     height: 100px;
     font-size: 1rem;
 }
+
 .social-icons a{
     color: inherit;
 }
+/* ---------------------- */
 
-
-
-
-
+/* --------- Navigation -------- */
 .navigation-menu{
     position: fixed;
     z-index: 1;
@@ -68,8 +66,41 @@ hr {
     box-sizing: border-box;
 }
 
-div .less{
-    height: 130px;
+.navigation-menu ul{
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-right: 30px;
+}
+
+.navigation-menu li{
+    display: inline;
+}
+
+.navigation-menu a,.separator{
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.burguer div{
+    width: 35px;
+    height: 5px;
+    background-color: rgb(93, 22, 44);
+    margin: 6px 0;
+}
+/* ------------------------------------------ */
+
+
+/* ------------ Main shared content ------------- */
+.content {
+    flex: 1 0 auto;
+}
+
+.header{
+    width: 100%;
 }
 
 .main-section > section,article{
@@ -86,34 +117,100 @@ div .less{
 
 }
 
-.navigation-menu ul{
-    display: none;
+.photo-jobs{
+    position: absolute;
+    bottom: 10px;
     width: 100%;
-    justify-content: space-evenly;
-    margin-right: 30px;
-}
-.navigation-menu li{
-    display: inline;
+    display: flex;
+    justify-content: space-around;
 }
 
-.navigation-menu a,.separator{
-    font-size: 1rem;
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.photo-jobs img{
+    width: 100px;
+    height: 100px;
+    background-color: white;
 }
 
+.photo-jobs a{
+    cursor: default;
+}
 
+.subjob-title{
+    font-size: 1.5rem;
+}
+
+.job-description{
+    margin-top: 10px;
+}
+
+.time-in-business{
+    margin-top: 10px;
+}
+
+.business-name{
+    font-weight: bold;
+}
+
+.business-name,.time-in-business{
+    color:#666;
+}
+
+.job-description{
+    text-align: justify;
+}
+
+.main-section .stack{
+    height: 30px;
+    padding: 0px;
+}
+
+.stack {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+/* --------------------------------------- */
+
+
+/* ---------------- Slide ----------------- */
 .slide,.slide-index{
     width: 100%;
     height: 250px;
     background-image: url("../src/serverMoreBlurred.jpg");
     position: relative;
 }
-.rounded{
-    border-radius: 50%;
+
+.job{
+    display: flex;
+    flex-direction: column;
 }
+
+.job-title,.job-title-index{
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    width: fit-content;
+    transform: translate(50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hello-world,.hello-world-index{
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: -2px;
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    top: 105px;
+    right: 50%;
+    width: 100%;
+    transform: translate(50%, -50%);
+    text-align: center;
+}
+
 .face-img{
     position: absolute;
     top: 90%;
@@ -122,10 +219,6 @@ div .less{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.contact-face img{
-    width: 80px;
-    height: 80px;
 }
 
 .face-img img{
@@ -165,40 +258,43 @@ div .less{
     text-decoration: none;
     color: inherit;
 }
+/* ---------------------------------------- */
 
 
-.job{
-    display: flex;
-    flex-direction: column;
+/* --------------General style ------------ */ 
+.rounded{
+    border-radius: 50%;
 }
 
-.job-title,.job-title-index{
-    font-size: 25px;
-    color: white;
-    position: absolute;
-    top: 80px;
-    right: 50%;
-    width: fit-content;
-    transform: translate(50%, -50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+.zoom{
+    transition: transform .2s;
 }
-.hello-world,.hello-world-index{
-    font-family: 'Source Code Pro', monospace;
-    letter-spacing: -2px;
-    font-size: 13px;
-    color: white;
-    position: absolute;
-    top: 105px;
-    right: 50%;
-    width: 100%;
-    transform: translate(50%, -50%);
+
+.zoom:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+.bigemphasis{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.centered{
     text-align: center;
 }
 
+.separator{
+    display: inline;
+}
+/* ---------------------------------------- */
+
+/* ---------------- index.html ---------------- */
 .presentation{
     text-align: justify;
 }
+
 .presentation *{
     display: inline;
 }
@@ -208,27 +304,22 @@ div .less{
     flex-direction: column;
 }
 
-.burguer div{
-    width: 35px;
-    height: 5px;
-    background-color: rgb(93, 22, 44);
-    margin: 6px 0;
-}
-
 blockquote  img  {
     width: 30px;
 }
+
 blockquote  p  {
     font-size: 1rem;
     color: #333;
     margin-bottom: 20px;
 }
+
 blockquote p cite  {
     color:#666;
     font-size: 20px;
     display:block;
     text-align:right;
-    }
+}
 
 .datos{
     display: flex;
@@ -238,68 +329,20 @@ blockquote p cite  {
     padding-bottom: 0px;
     background-color: white;
 }
+
 .datos-div{
     width: 50%;
     margin-top: 20px;
     text-align: center;
 }
+
 .datos-div :first-child{
     color: black;
     font-weight: bold;
 }
+/* -------------------------------- */
 
-.photo-jobs{
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.photo-jobs img{
-    width: 100px;
-    height: 100px;
-    background-color: white;
-}
-.photo-jobs a{
-    cursor: default;
-}
-
-
-
-
-.zoom{
-    transition: transform .2s;
-}
-.zoom:hover{
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
-}
-
-.subjob-title{
-    font-size: 1.5rem;
-}
-
-.job-description{
-    margin-top: 10px;
-}
-
-.time-in-business{
-    margin-top: 10px;
-}
-
-.business-name{
-    font-weight: bold;
-}
-
-.business-name,.time-in-business{
-    color:#666;
-}
-
-.job-description{
-    text-align: justify;
-}
+/* ----------- experiencia.html ---------- */
 .job-tasks{
     margin-top: 8px;
 }
@@ -308,7 +351,22 @@ blockquote p cite  {
     list-style-type: square;
     margin-left: 30px;
 }
+/* ------------------------------------- */
 
+/* ----------- proyectos.html ---------- */
+.job-row{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.img-line{
+    width: 150px;
+    margin-top: 20px;
+}
+/* ------------------------------------- */
+
+/* ----------- contacto.html ---------- */
 .contact{
     margin-top: 5px;
     display: flex;
@@ -320,6 +378,7 @@ blockquote p cite  {
 .gif{
     width: 100%;
 }
+
 .gif2{
     display: none;
 }
@@ -351,6 +410,7 @@ blockquote p cite  {
     border: none;
     font-weight: bold;
 }
+
 .warning{
     background-color: rgba(242, 255, 51, 0.5);
     height: fit-content;
@@ -359,48 +419,24 @@ blockquote p cite  {
     padding: 5px;
     font-size: 0.9rem;
 }
+/* ------------------------------------- */
 
-
-.job-row{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-}
-
-.img-line{
-    width: 150px;
-    margin-top: 20px;
-}
-
-.main-section .stack{
-    height: 30px;
-    padding: 0px;
-}
-
-.bigemphasis{
-    font-size: 3.5rem;
-    font-weight: bold;
-}
-
-.centered{
-    text-align: center;
-}
-.separator{
-    display: inline;
-}
-
-.stack {
-    background-color: #ffffff;
-    color: #000000;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-}
+/* ---------- education.html ----------- */
 .edu-number{
     display: none;
 }
+/* ------------------------------------- */
 
 
-/* START RESPONSIVE */
+/* ------------- Other stuff ------------- */
+div .less{
+    height: 130px;
+}
+/* --------------------------------------- */
+
+/* ###################################################### */
+/* ----------------- Responsive Stuff ------------------- */
+/* ###################################################### */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .statics > div{

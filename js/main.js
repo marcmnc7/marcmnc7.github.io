@@ -1,3 +1,4 @@
+/* Funcion que va cambiando la foto de mi cara cuando se clica */
 function changeFace() {
     var nav = document.getElementById("face");
     fileRoute = window.location.origin
@@ -13,6 +14,7 @@ function changeFace() {
     }
 }
 
+/* Funcion que sirve para enseñar o quitar el menu de navegacion en pantallas pequeñas */
 function showNav() {
     var x = document.getElementById("myLinks");
     var name = document.getElementById("name");
@@ -23,8 +25,4 @@ function showNav() {
       x.style.display = "flex";
       name.style.display = "none";
     }
-  }
-
-function navToggle(x) {
-    x.classList.toggle("change");
 }
