@@ -364,6 +364,18 @@ blockquote p cite  {
     width: 150px;
     margin-top: 20px;
 }
+
+.tags{
+    margin-top: 10px;
+}
+
+.tags p{
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: inline;
+    padding: 1px 5px 1px 5px;
+    background-color: white;
+}
 /* ------------------------------------- */
 
 /* ----------- contacto.html ---------- */

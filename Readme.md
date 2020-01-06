@@ -17,7 +17,7 @@ Este repositorio aloja mi pagina web personal, que se divide en los sigüientes 
 
 3. **Educación**: Toda la educacion superior realizada hasta la fecha junto con su descripcion y fechas.
 
-4. **Proyectos**: Algunos de los proyectos que he realizado durante mi tiempo libre, junto con su descripción y alguna información demás.
+4. **Proyectos**: Algunos de los proyectos que he realizado durante mi tiempo libre, junto con su descripción, principales tecnologías usadas y alguna información demás.
 
 5. **Contacto**: Formulario de contacto para quien quiera contactar conmigo. De momento esta funcion esta deshabilitada.
 
